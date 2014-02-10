@@ -10,4 +10,9 @@
 		{
 			
 		}
+
+		public static function createBuyButton()
+		{
+			
+		}
 	}
