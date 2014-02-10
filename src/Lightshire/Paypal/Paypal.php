@@ -6,7 +6,7 @@
 
 	use App;
 	use Config;
-	use Paypal\Auth\OAuthTokenCredential.php;
+	use PayPal\Auth\OAuthTokenCredential;
 
 
 	class Paypal
