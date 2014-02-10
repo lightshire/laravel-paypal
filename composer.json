@@ -13,5 +13,10 @@
             "email": "giansantillan18@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-0": {
+            "Lightshire\\Paypal\\": "src/"
+        }
+    },
     "minimum-stability": "stable"
 }
