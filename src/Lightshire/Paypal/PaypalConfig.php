@@ -39,7 +39,17 @@ class PaypalConfig extends Command {
 	public function fire()
 	{
 		//
+			
+		$filepath 	= base_path()."/vendor/paypal/sdk-core-php/lib/../config/sdk_config.ini";
+
+
+		echo "the file is being saved to ".$filepath."..\n";
 		
+		$handle 	= fopen($filepath, 'w');
+
+		echo "file saved and opened..\n";
+		fclose($handle);
+		echo "file is stored and closed..\n";
 	}
 
 	/**
@@ -50,7 +60,7 @@ class PaypalConfig extends Command {
 	protected function getArguments()
 	{
 		return array(
-			array('example', InputArgument::REQUIRED, 'An example argument.'),
+			//no need for arguments
 		);
 	}
 
