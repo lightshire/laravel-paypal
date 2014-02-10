@@ -5,6 +5,7 @@
 
 
 	use App;
+	use Config;
 	use Paypal\Auth\OAuthTokenCredential;
 
 
