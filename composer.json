@@ -1,6 +1,14 @@
 {
     "name": "lightshire/laravel-paypal",
     "description": "A Basic Laravel PHP Wrapper for the Paypal API",
+    "keywords" : [
+        "laravel",
+        "php",
+        "laravel-php",
+        "paypal-laravel",
+        "laravel-paypal",
+        "paypal-php"
+    ],
     "require": {
         "php" : ">=5.3.0",
         "ext-curl" : "*",
