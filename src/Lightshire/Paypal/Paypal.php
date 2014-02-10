@@ -6,7 +6,7 @@
 
 	use App;
 	use Config;
-	use Paypal\Auth\OAuthTokenCredential;
+	use Paypal\Auth\OAuthTokenCredential.php;
 
 
 	class Paypal
@@ -29,7 +29,6 @@
 			$mode 		= Config::get('laravel-paypal:mode');
 
 			$creds 			= new OAuthTokenCredential($client_id, $secret);
-
 			$accessToken 	= $creds->getAccessToken(array('mode'=>$mode));	 
 		
 			return array(
