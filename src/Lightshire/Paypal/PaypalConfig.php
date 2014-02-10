@@ -1,4 +1,5 @@
 <?php
+namespace Lightshire\Paypal;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
@@ -11,7 +12,7 @@ class PaypalConfig extends Command {
 	 *
 	 * @var string
 	 */
-	protected $name = 'command:name';
+	protected $name = 'command:paypalconfig';
 
 	/**
 	 * The console command description.
