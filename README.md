@@ -4,19 +4,21 @@ This paypal laravel wrapper is created for simultaneous or bulk differentials in
 ###INSTALLATION
 add the following from your `composer.json`
 
-	```json
+```json
 	"lightshire/laravel-paypal": "dev-master"
+```
 
 ####SERVICE PROVIDER
-	```php
+```php
 	'providers'	=> array(
 			'Lightshire\Paypal\PaypalServiceProvider'
 		)
-
+```
 ####FACADE
-	```php
-	'facades' 	=> array(
+```php
+'facades' 	=> array(
 			'Paypal' 		  => 'Lightshire\Paypal\Facades\Facade'
 		)
+```
 #####Uses
 	-there is no definite use as of the moment!
