@@ -1,6 +1,8 @@
 <?php
-	require base_path()."/vendor/autoload.php";
 	namespace Lightshire\Paypal;
+
+	require base_path()."/vendor/autoload.php";
+
 
 	use App;
 	use Paypal\Auth\OAuthTokenCredential;
@@ -16,7 +18,7 @@
 			$data = Paypal::launch();
 			$this->creds = $data["creds"];
 			$this->token = $data["token"];
-			
+
 		}
 
 		public static function launch()
