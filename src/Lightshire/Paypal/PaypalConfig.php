@@ -40,8 +40,13 @@ class PaypalConfig extends Command {
 	{
 		//
 			
-		$filepath 	= base_path()."/vendor/paypal/sdk-core-php/lib/../config/sdk_config.ini";
+		$filepath 	= base_path()."/vendor/paypal/sdk-core-php/lib/../config";
 
+		if(!file_exists($filepath)) {
+			mkdir($filepath);
+		}
+
+		$filepath."/sdk_config.ini";
 
 		echo "the file is being saved to ".$filepath."..\n";
 		
