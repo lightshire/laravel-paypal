@@ -46,7 +46,7 @@ class PaypalConfig extends Command {
 			mkdir($filepath);
 		}
 
-		$filepath."/sdk_config.ini";
+		$filepath.="/sdk_config.ini";
 
 		echo "the file is being saved to ".$filepath."..\n";
 		
