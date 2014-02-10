@@ -10,7 +10,7 @@
 		public function boot()
 		{
 			$this->package("lightshire/laravel-paypal");
-			include app_path()."/routes.php"
+			include app_path()."/routes.php";
 		}
 
 		public function register()
