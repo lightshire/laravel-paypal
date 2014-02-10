@@ -39,7 +39,7 @@ class PaypalConfig extends Command {
 	public function fire()
 	{
 		//
-		echo "hello world";
+		
 	}
 
 	/**

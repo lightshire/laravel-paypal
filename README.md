@@ -43,3 +43,12 @@ you should see the following
 change `mode` with `live` or `sandbox` depending on your paypal configuration.
 
 Once you have already created your own paypal application you will be given a `Client ID` and a `Secret`. Those values should replace the `nil` inside the array.
+
+####Adding pre-made artisan commands
+an artisan command `command:paypalconfig` was created in order to easily edit the embedded `sdk_config.ini` of the paypal API. to install:
+
+add the following to `app/start/artisan.php`
+
+```php
+Artisan::add(new Lightshire\Paypal\PaypalConfig);
+```
