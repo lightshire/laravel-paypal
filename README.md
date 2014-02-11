@@ -11,13 +11,15 @@ add the following from your `composer.json`
 ####SERVICE PROVIDER
 ```php
 	'providers'	=> array(
-			'Lightshire\Paypal\PaypalServiceProvider'
+			'Lightshire\Paypal\PaypalServiceProvider',
+			'Lightshire\Paypal\IpnServiceProvider'
 		)
 ```
 ####FACADE
 ```php
 'facades' 	=> array(
-			'Paypal' 		  => 'Lightshire\Paypal\Facades\Facade'
+			'Paypal'		=> 'Lightshire\Paypal\Facades\Facade',
+			'IpnListener'	=> 'Lightshire\Paypal\Facades\IpnListenerFacade'
 		)
 ```
 #####Uses
