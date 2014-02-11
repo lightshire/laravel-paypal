@@ -43,8 +43,8 @@
 			$encodedID 	= base64_encode($client_id.":".$secret);
 			$headers 	= array(
 					// 'Authorization' => 'Basic '.$encodedID,
-					'Accept' 		=>  "*/*",
-					'Content-type' 	=> 'multipart/form-data'
+					'Accept' 			=>  "application/json",
+					'Accept-Language'	=> 'en_US'
 				); 
 
 			$params 	= array(
@@ -58,7 +58,8 @@
 			curl_setopt($ch, CURLOPT_USRPWD, $client_id.":".$secret);
 			curl_setopt($ch, CURLOPT_URL, $url);
 			curl_setopt($ch, CURLOPT_POST, true);
-			curl_setopt($ch, CURLOPT_HEADER, $headers);
+			curl_setopt($ch, CURLOPT_HEADER, true);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
 			
 			$response = curl_exec($ch);
