@@ -17,11 +17,14 @@
 		private static $instance = null;
 
 
-		public function __construct($data)
+		public function __construct($data = null)
 		{
-			$this->scope 		= $data->scope;
-			$this->token 		= $data->access_token;
-			$this->token_type 	= $data->token_type;
+			if($data) {
+				$this->scope 		= $data->scope;
+				$this->token 		= $data->access_token;
+				$this->token_type 	= $data->token_type;
+				$this->creds 		= $data;
+			}
 
 		}
 
@@ -81,4 +84,16 @@
 		{
 			return self::$instance;
 		}
+
+		public function toArray()
+		{
+			$array = array();
+			$array["creds"] 		= $this->creds;
+			$array["token"] 		= $this->token;
+			$array["scope"] 		= $this->scope;
+			$array["token_type"]	= $this->token_type;
+			return $array;
+		}
+
+
 	}
