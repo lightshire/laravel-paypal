@@ -52,3 +52,15 @@ add the following to `app/start/artisan.php`
 ```php
 Artisan::add(new Lightshire\Paypal\PaypalConfig);
 ```
+
+
+####Initiating a Paypal instance connection
+To initiate a paypal instance, after all configuration
+```php
+Paypal::make();
+```
+
+since there will only be one instance per connection, directly creating an nstance via `new Paypal` would not override the instance, instead run the `make` method. To get the current instance, connect via:
+```php
+Paypal::getInstance()
+```
