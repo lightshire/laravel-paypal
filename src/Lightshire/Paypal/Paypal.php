@@ -36,12 +36,14 @@
 
 		public static function getTokenCreds()
 		{
+			dd("token");
+
 			$client_id 	= Config::get('laravel-paypal:client_id');
 			$secret 	= Config::get('laravel-paypal:secret');
 			$mode 		= Config::get('laravel-paypal:mode');
 			$endPoint 	= Config::get('laravel-paypal:endpoint');
 
-			dd($endPoint);
+
 			$headers 	= array(
 					// 'Authorization' => 'Basic '.$encodedID,
 					'Accept' 			=>  "application/json",
