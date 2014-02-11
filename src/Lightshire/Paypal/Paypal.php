@@ -109,7 +109,7 @@
 			}
 
 			try {
-				$verified =  = $listener->processIpn();
+				$verified = $listener->processIpn();
 			}catch(Exception $exs) {
 				return false;
 			}
