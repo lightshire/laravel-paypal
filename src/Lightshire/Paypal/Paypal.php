@@ -95,5 +95,30 @@
 			return $array;
 		}
 
+		public function IPNConfirmer()
+		{
+			$listener = new IpnListener();
+
+			$client_id 	= Config::get('laravel-paypal::config.client_id'); 
+			$secret 	= Config::get('laravel-paypal::config.secret');
+			$mode 		= Config::get('laravel-paypal::config.mode');
+			$endPoint 	= Config::get('laravel-paypal::config.endpoint');
+
+			if($mode == 'sandbox') {
+				$listener->use_sandbox = true;
+			}
+
+			try {
+				$verified =  = $listener->processIpn();
+			}catch(Exception $exs) {
+				return false;
+			}
+
+			if($verified) {
+				return true;
+			}else {
+				return false;
+			}
+		}
 
 	}

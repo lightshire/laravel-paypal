@@ -64,3 +64,44 @@ since there will only be one instance per connection, directly creating an nstan
 ```php
 Paypal::getInstance()
 ```
+
+###Using the Instant Payment Notification of Paypal
+for secure transactions paypal requires to have a vaiable callback
+to initiate an IPNListener 
+
+example
+
+```php
+
+$mode 		= Config::get('laravel-paypal::config.mode');
+$listener 	= new IpnListener();
+
+if($mode == 'sandbox') {
+	$listener->use_sandbox = true;
+}
+
+try {
+	$verified = $listener->processIpn();
+}catch(Exception $exs) {
+	//an error occured
+	exit(0);
+}
+
+if($verified) {
+	//verified
+}else {
+	//not verified
+}
+
+```
+
+
+You could also directly wait for a confirmation that would return `true` or `false` by using
+
+```php
+Paypal::IPNConfirmer()
+````
+
+####Credits
+Credits to 
+	-https://github.com/Quixotix/PHP-PayPal-IPN
